@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "61490848691",
+    "project_id": "novo-9cc0d",
+    "storage_bucket": "novo-9cc0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61490848691:android:2407065482c743034a21c6",
+        "android_client_info": {
+          "package_name": "com.example.novo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61490848691-17cf6rp4781f62j3ecb5lkj6lbrj254o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.novo",
+            "certificate_hash": "c9f717ddd6b24da850010057e4dd4d86f623a806"
+          }
+        },
+        {
+          "client_id": "61490848691-ho3e7h8398u217suink92ac9d8baplrj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMT5YCAIEqxjocYoo8PHuQRUaXny8CV3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61490848691-4ijd07930bjg0mp28lsrp2sl2hch967b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

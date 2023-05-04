@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         splashTransition: SplashTransition.fadeTransition,
         splashIconSize: 500,
         backgroundColor: Color.fromARGB(255, 0, 237, 225),
-        duration: 4000,
+        duration: 3000,
         ),
       
     );

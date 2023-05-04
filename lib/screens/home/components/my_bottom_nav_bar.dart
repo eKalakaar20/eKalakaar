@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:novo/constants.dart';
+import 'package:novo/utils/constants.dart';
 
 
 class MyBottomNavBar extends StatelessWidget {

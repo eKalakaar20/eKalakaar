@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_zoom_drawer/config.dart';
-import 'package:novo/constants.dart';
+import 'package:novo/utils/constants.dart';
 import 'package:novo/screens/home/components/body.dart';
 import 'package:novo/screens/home/components/my_bottom_nav_bar.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';

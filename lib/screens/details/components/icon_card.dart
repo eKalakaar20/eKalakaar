@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
+import '../../../utils/constants.dart';
 
 class IconCard extends StatelessWidget {
   const IconCard({

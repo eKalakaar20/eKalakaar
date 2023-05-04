@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:novo/screens/details/details_screen.dart';
 
-import '../../../constants.dart';
+import '../../../utils/constants.dart';
 
 class RecomendsPlants extends StatelessWidget {
   const RecomendsPlants({
@@ -17,27 +17,19 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: "https://ekalakaar.com/assets/images/patron1.jpg",
             title: "Patron",
-            country: "Russia",
-            price: 440,
 
           ),
           RecomendPlantCard(
             image: "https://ekalakaar.com/assets/images/artist.jpg",
             title: "Artist",
-            country: "Russia",
-            price: 440,
           ),
           RecomendPlantCard(
             image: "https://ekalakaar.com/assets/images/partners.jpg",
             title: "partners",
-            country: "Russia",
-            price: 440,
           ),
           RecomendPlantCard(
             image: "https://ekalakaar.com/assets/images/fans.jpg",
             title: "Art Lovers",
-            country: "Russia",
-            price: 440,
           ),
         ],
       ),
@@ -50,13 +42,9 @@ class RecomendPlantCard extends StatelessWidget {
     Key? key,
     required this.image,
     required this.title,
-    required this.country,
-    required this.price,
   }) : super(key: key);
 
-  final String image, title, country;
-  final int price;
-
+  final String image, title;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

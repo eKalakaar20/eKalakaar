@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:novo/screens/home/home_screen.dart';
 import 'package:novo/screens/login/login.dart';
 import 'package:novo/services/googleSignIn.dart';
-import 'package:novo/services/widgets.dart';
+import 'package:novo/utils/widgets.dart';
 
 class MyRegister extends StatefulWidget {
   @override

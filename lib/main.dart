@@ -1,14 +1,10 @@
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:novo/constants.dart';
-import 'package:novo/firebase_options.dart';
-import 'package:novo/screens/home/home_screen.dart';
-import 'package:novo/screens/home/menu_screen.dart';
-import 'package:novo/screens/sign_up/register.dart';
+import 'package:novo/screens/login/signin_screen.dart';
+import 'package:novo/utils/constants.dart';
+import 'package:novo/services/firebase_options.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-
-import 'screens/home/drawer_screen.dart';
-
 void main() async {
    WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -29,15 +25,15 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: DrawerScreen(),
-      //  AnimatedSplashScreen(
-      //   splash: Image.asset("assets/images/main.png"),
-      //   nextScreen: HomeScreen(),
-      //   splashTransition: SplashTransition.fadeTransition,
-      //   splashIconSize: 250,
-      //   backgroundColor: Colors.white,
-      //   duration: 3000,
-      //   ),
+      home: AnimatedSplashScreen(
+        splash: Image.asset("assets/images/logoo.png",),
+        nextScreen: SignInScreen(),
+        splashTransition: SplashTransition.fadeTransition,
+        splashIconSize: 500,
+        backgroundColor: Color.fromARGB(255, 0, 237, 225),
+        duration: 4000,
+        ),
+      
     );
   }
 }

@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:novo/screens/home/home_screen.dart';
 import 'package:novo/screens/sign_up/register.dart';
-import 'package:novo/services/widgets.dart';
+import 'package:novo/utils/widgets.dart';
 
 class Mylogin extends StatefulWidget {
   @override

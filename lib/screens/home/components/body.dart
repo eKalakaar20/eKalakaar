@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:novo/constants.dart';
+import 'package:novo/utils/constants.dart';
 import 'featurred_plants.dart';
 import 'header_with_seachbox.dart';
-import 'list.dart';
-import 'recomend_plants.dart';
+import 'carousel.dart';
+import 'services.dart';
 import 'title_with_more_bbtn.dart';
 
 class Body extends StatelessWidget {
@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           HeaderWithSearchBox(size: size),
-          list(),
+          Carousal(),
           TitleWithMoreBtn(title: "Services Provided", press: () {}),
           RecomendsPlants(),
           TitleWithMoreBtn(title: "Featured Plants", press: () {}),

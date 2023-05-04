@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:novo/screens/home/home_screen.dart';
-import 'menu_screen.dart';
 
- final zoomDrawerController = ZoomDrawerController();
+final zoomDrawerController = ZoomDrawerController();
 
- class DrawerScreen extends StatefulWidget {
+class DrawerScreen extends StatefulWidget {
   const DrawerScreen({Key? key}) : super(key: key);
 
   @override
@@ -14,20 +13,131 @@ import 'menu_screen.dart';
 }
 
 class _DrawerScreenState extends State<DrawerScreen> {
-
   @override
   Widget build(BuildContext context) {
     return ZoomDrawer(
       mainScreenTapClose: true,
-      //slideWidth: 300.0,
+      slideWidth: 250.0,
       //menuScreenWidth:100,
       controller: zoomDrawerController,
       menuScreen: const MenuScreen(),
       mainScreen: const HomeScreen(),
       showShadow: true,
       style: DrawerStyle.defaultStyle,
-      angle: 0,
+      angle: -9,
       //isRtl: true,
+    );
+  }
+}
+
+//======================================================================================================
+
+class MenuScreen extends StatefulWidget {
+  const MenuScreen({Key? key}) : super(key: key);
+
+  @override
+  State<MenuScreen> createState() => _MenuScreenState();
+}
+
+class _MenuScreenState extends State<MenuScreen> {
+  bool check = false;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        // margin: EdgeInsets.only(top:25),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.centerRight,
+            end: Alignment.centerLeft,
+            colors: [
+              Colors.black,
+              Color.fromARGB(255, 237, 16, 0),
+            ],
+          ),
+        ),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            SizedBox(height: 40),
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(color: Colors.transparent),
+              accountName: RichText(
+                  text: TextSpan(
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold,
+                           color: Colors.blue
+                          ),
+                      text: 'joes harley\n',
+                      children: <InlineSpan>[
+                    TextSpan(
+                      text: '(Dancer)',
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontStyle: FontStyle.italic,
+                          //fontWeight: FontWeight.bold,
+                           color: Colors.black,
+                          ),
+                    )
+                  ])),
+              accountEmail: const Text('johndoe@example.com'),
+              currentAccountPictureSize: Size.square(68.0),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.black,
+                child: Padding(
+                  padding: const EdgeInsets.all(3.0),
+                  child: Image.asset(
+                    "assets/images/logo.png",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 40),
+            ListTile(
+                leading: Icon(Icons.person),
+                title: Text("Profile"),
+                iconColor: Colors.white,
+                contentPadding: EdgeInsets.only(left: 25)),
+            ListTile(
+                leading: Icon(Icons.diversity_1),
+                title: Text("Art Lovers"),
+                iconColor: Colors.white,
+                contentPadding: EdgeInsets.only(left: 25)),
+            ListTile(
+                leading: Icon(Icons.extension),
+                title: Text("Patron"),
+                iconColor: Colors.white,
+                contentPadding: EdgeInsets.only(left: 25)),
+            ListTile(
+                leading: Icon(Icons.auto_awesome),
+                title: Text("Artist"),
+                iconColor: Colors.white,
+                contentPadding: EdgeInsets.only(left: 25)),
+            ListTile(
+                leading: Icon(Icons.whatshot),
+                title: Text("Media"),
+                iconColor: Colors.white,
+                contentPadding: EdgeInsets.only(left: 25)),
+            ListTile(
+                leading: Icon(Icons.mail),
+                title: Text("Contact Us"),
+                iconColor: Colors.white,
+                contentPadding: EdgeInsets.only(left: 25)),
+            ListTile(
+                leading: Icon(Icons.corporate_fare),
+                title: Text("About"),
+                iconColor: Colors.white,
+                contentPadding: EdgeInsets.only(left: 25)),
+            Spacer(),
+            ListTile(
+                leading: Icon(Icons.arrow_back_ios),
+                title: Text("Logout"),
+                iconColor: Colors.white,
+                contentPadding: EdgeInsets.only(left: 25)),
+          ],
+        ),
+      ),
     );
   }
 }

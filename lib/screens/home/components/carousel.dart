@@ -5,23 +5,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class list extends StatefulWidget {
-  const list({super.key});
+class Carousal extends StatefulWidget {
+  const Carousal({super.key});
 
   @override
-  State<list> createState() => _listState();
+  State<Carousal> createState() => _CarousalState();
 }
 
-class _listState extends State<list> {
+class _CarousalState extends State<Carousal> {
   var item = [
-    'https://ekalakaar.com/assets/carousel_images/ekalakkar_frontpic.jpeg',
-    'https://ekalakaar.com/assets/carousel_images/Dance_1.jpeg'
-    'https://ekalakaar.com/assets/carousel_images/Music_1.jpeg'
-    'https://ekalakaar.com/assets/carousel_images/Dance_3.jpeg'
-    'https://ekalakaar.com/assets/carousel_images/Music_2.jpeg',
-    'https://ekalakaar.com/assets/carousel_images/Music_3.jpeg',
-    'https://ekalakaar.com/assets/carousel_images/Dance_2.jpeg',
-    'https://ekalakaar.com/assets/carousel_images/Music_4.jpeg',
+    'assets/images/ekalakkar_frontpic.jpeg',
+    'assets/images/Dance_1.jpeg',
+    'assets/images/Music_1.jpeg',
+    'assets/images/Dance_3.jpeg',
+    'assets/images/Music_2.jpeg',
+    'assets/images/Music_3.jpeg',
+    'assets/images/Dance_2.jpeg',
+    'assets/images/Music_4.jpeg',
   ];
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class _listState extends State<list> {
       itemCount:item.length ,
       itemBuilder: (context,index,realindex){
          
-          return Image.network(item[index]);
+          return Image.asset(item[index]);
       },
   options: CarouselOptions(
   height:250,

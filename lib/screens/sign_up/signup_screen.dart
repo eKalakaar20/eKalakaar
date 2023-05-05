@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:novo/utils/constants.dart';
 import '../../utils/colors.dart';
 import '../../utils/reusable_widget.dart';
 import '../login/signin_screen.dart';
@@ -17,18 +18,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController _userNameTextController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
+  var dropdownValue = "Choose Your Role";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     //resizeToAvoidBottomInset: true,
+      //resizeToAvoidBottomInset: true,
       body: Container(
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-          //  alignment: Alignment.center,
-           
-           fit: BoxFit.cover,
-            image:AssetImage("assets/images/log.png")),
+              //  alignment: Alignment.center,
+
+              fit: BoxFit.cover,
+              image: AssetImage("assets/images/log.png")),
           gradient: LinearGradient(
             colors: [
               hexStringToColor("CB2B93"),
@@ -47,9 +50,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Form(
               key: _formKey,
               child: Column(
-               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  
                   const SizedBox(height: 270),
                   reusableTextField("Enter Username", Icons.person_outline,
                       false, true, _userNameTextController),
@@ -60,12 +62,57 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   reusableTextField("Enter Password", Icons.lock_outline, true,
                       false, _passwordTextController),
                   const SizedBox(height: 20),
-                  DefaultButton(context, "SIGN UP", () {
-                    if (_formKey.currentState!.validate()) {
-                          MaterialPageRoute(
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(left: 9),
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 2.0),
+                          borderRadius: BorderRadius.all(Radius.circular(
+                                  30.0) //                 <--- border radius here
+                              ),
+                        ),
+                          child: DropdownButton<String>(
+                          alignment: AlignmentDirectional.center,
+                          value: dropdownValue,
+                          underline: ColoredBox(color: Colors.transparent),
+                          borderRadius: BorderRadius.circular(40),
+                          icon: const Icon(Icons.arrow_drop_down),
+                          iconSize: 24,
+                          elevation: 16,
+                          style: const TextStyle(color: kTextColor),
+                          onChanged: (String? newValue) {
+                            setState(() {
+                              dropdownValue = newValue!;
+                            });
+                          },
+                          items: <String>[
+                            'Choose Your Role',
+                            'Artist',
+                            'Patron',
+                            'Art Lover',
+                            'Special Services'
+                          ].map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                                                ),
+                      ),
+                      SizedBox(width: 7,),
+                 
+                      Expanded(
+                        child: DefaultButton(context, "SIGN UP", () {
+                          if (_formKey.currentState!.validate()) {
+                            MaterialPageRoute(
                                 builder: (context) => const SignInScreen());
-                    }
-                  }),
+                          }
+                        }),
+                      ),
+                    ],
+                  ),
                   signInOption(),
                 ],
               ),

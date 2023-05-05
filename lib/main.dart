@@ -26,11 +26,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: AnimatedSplashScreen(
-        splash: Image.asset("assets/images/logoo.png",),
+        splash: Image.asset("assets/images/ek.jpg",),
         nextScreen: SignInScreen(),
         splashTransition: SplashTransition.fadeTransition,
         splashIconSize: 500,
-        backgroundColor: Color.fromARGB(255, 0, 237, 225),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         duration: 3000,
         ),
       

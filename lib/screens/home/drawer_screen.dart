@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:novo/screens/home/home_screen.dart';
+import 'package:novo/utils/constants.dart';
 
 final zoomDrawerController = ZoomDrawerController();
 
@@ -17,7 +18,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
   Widget build(BuildContext context) {
     return ZoomDrawer(
       mainScreenTapClose: true,
-      slideWidth: 250.0,
+      //slideWidth: 250.0,
       //menuScreenWidth:100,
       controller: zoomDrawerController,
       menuScreen: const MenuScreen(),
@@ -47,14 +48,17 @@ class _MenuScreenState extends State<MenuScreen> {
       body: Container(
         // margin: EdgeInsets.only(top:25),
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.centerRight,
-            end: Alignment.centerLeft,
-            colors: [
-              Colors.black,
-              Color.fromARGB(255, 237, 16, 0),
-            ],
+          image: DecorationImage(image: AssetImage("assets/images/bg.jpg"),
+          fit: BoxFit.cover
           ),
+          // gradient: LinearGradient(
+          //   begin: Alignment.centerRight,
+          //   end: Alignment.centerLeft,
+          //   colors: [
+          //     Colors.black,
+          //     Color.fromARGB(255, 237, 16, 0),
+          //   ],
+          // ),
         ),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -80,7 +84,7 @@ class _MenuScreenState extends State<MenuScreen> {
                           ),
                     )
                   ])),
-              accountEmail: const Text('johndoe@example.com'),
+              accountEmail: Text("johndoe@example.com",style: TextStyle(color: kTextColor),),
               currentAccountPictureSize: Size.square(68.0),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.black,
@@ -97,43 +101,43 @@ class _MenuScreenState extends State<MenuScreen> {
             ListTile(
                 leading: Icon(Icons.person),
                 title: Text("Profile"),
-                iconColor: Colors.white,
+                iconColor: kTextColor,
                 contentPadding: EdgeInsets.only(left: 25)),
             ListTile(
                 leading: Icon(Icons.diversity_1),
                 title: Text("Art Lovers"),
-                iconColor: Colors.white,
+                iconColor: kTextColor,
                 contentPadding: EdgeInsets.only(left: 25)),
             ListTile(
                 leading: Icon(Icons.extension),
                 title: Text("Patron"),
-                iconColor: Colors.white,
+                iconColor: kTextColor,
                 contentPadding: EdgeInsets.only(left: 25)),
             ListTile(
                 leading: Icon(Icons.auto_awesome),
                 title: Text("Artist"),
-                iconColor: Colors.white,
+                iconColor: kTextColor,
                 contentPadding: EdgeInsets.only(left: 25)),
             ListTile(
                 leading: Icon(Icons.whatshot),
                 title: Text("Media"),
-                iconColor: Colors.white,
+                iconColor: kTextColor,
                 contentPadding: EdgeInsets.only(left: 25)),
             ListTile(
                 leading: Icon(Icons.mail),
                 title: Text("Contact Us"),
-                iconColor: Colors.white,
+                iconColor: kTextColor,
                 contentPadding: EdgeInsets.only(left: 25)),
             ListTile(
                 leading: Icon(Icons.corporate_fare),
                 title: Text("About"),
-                iconColor: Colors.white,
+                iconColor: kTextColor,
                 contentPadding: EdgeInsets.only(left: 25)),
             Spacer(),
             ListTile(
                 leading: Icon(Icons.arrow_back_ios),
                 title: Text("Logout"),
-                iconColor: Colors.white,
+                iconColor: kTextColor,
                 contentPadding: EdgeInsets.only(left: 25)),
           ],
         ),

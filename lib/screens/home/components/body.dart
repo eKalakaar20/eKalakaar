@@ -13,17 +13,24 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     // it enable scrolling on small device
     return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          HeaderWithSearchBox(size: size),
-          Carousal(),
-          TitleWithMoreBtn(title: "Services Provided", press: () {}),
-          RecomendsPlants(),
-          TitleWithMoreBtn(title: "Featured Plants", press: () {}),
-          FeaturedPlants(),
-          SizedBox(height: kDefaultPadding),
-        ],
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage("assets/images/bg.jpg"),
+            fit: BoxFit.cover
+          )
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            HeaderWithSearchBox(size: size),
+            Carousal(),
+            TitleWithMoreBtn(title: "Services Provided", press: () {}),
+            RecomendsPlants(),
+            TitleWithMoreBtn(title: "Featured Plants", press: () {}),
+            FeaturedPlants(),
+            SizedBox(height: kDefaultPadding),
+          ],
+        ),
       ),
     );
   }

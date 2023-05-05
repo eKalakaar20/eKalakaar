@@ -14,14 +14,15 @@ class Carousal extends StatefulWidget {
 
 class _CarousalState extends State<Carousal> {
   var item = [
-    'assets/images/ekalakkar_frontpic.jpeg',
-    'assets/images/Dance_1.jpeg',
-    'assets/images/Music_1.jpeg',
-    'assets/images/Dance_3.jpeg',
-    'assets/images/Music_2.jpeg',
-    'assets/images/Music_3.jpeg',
-    'assets/images/Dance_2.jpeg',
-    'assets/images/Music_4.jpeg',
+    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c1.jpg',
+    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c2.jpg',
+    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c3.jpg',
+    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c4.jpg',
+    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c5.jpg',
+    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c6.jpg',
+    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c7.jpg',
+    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c8.jpg',
+    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c9.jpg',
   ];
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class _CarousalState extends State<Carousal> {
       itemCount:item.length ,
       itemBuilder: (context,index,realindex){
          
-          return Image.asset(item[index]);
+          return Image.network(item[index]);
       },
   options: CarouselOptions(
   height:250,

@@ -44,6 +44,8 @@ dependencies:
   flutter_auth_buttons: ^0.10.0
   carousel_slider: ^4.2.1
   flutter_zoom_drawer: ^3.0.4+1
+  google_fonts: ^4.0.4
+  sizer: ^2.0.15
 dev_dependencies:
   flutter_test:
     sdk: flutter

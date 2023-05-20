@@ -26,7 +26,7 @@ class Body extends StatelessWidget {
             Carousal(),
             TitleWithMoreBtn(title: "Services Provided", press: () {}),
             RecomendsPlants(),
-            TitleWithMoreBtn(title: "Featured Plants", press: () {}),
+            TitleWithMoreBtn(title: "Our Elite Partners", press: () {}),
             FeaturedPlants(),
             SizedBox(height: kDefaultPadding),
           ],

@@ -14,15 +14,21 @@ class Carousal extends StatefulWidget {
 
 class _CarousalState extends State<Carousal> {
   var item = [
-    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c1.jpg',
-    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c2.jpg',
-    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c3.jpg',
-    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c4.jpg',
-    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c5.jpg',
-    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c6.jpg',
-    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c7.jpg',
-    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c8.jpg',
-    'https://sweet-faloodeh-5b5fd0.netlify.app/assets/carousel_images/c9.jpg',
+    'assets/images/c1.jpg',
+    'assets/images/c2.png',
+    'assets/images/c3.png',
+    'assets/images/c5.png',
+    'assets/images/c6.png',
+    'assets/images/c7.png',
+    'assets/images/c8.png',
+    'assets/images/c9.png',
+    'assets/images/c10.png',
+    'assets/images/c11.png',
+    'assets/images/c12.png',
+    'assets/images/c13.png',
+    'assets/images/c14.png',
+    'assets/images/c15.png',
+    'assets/images/c16.png',
   ];
   @override
   Widget build(BuildContext context) {
@@ -30,7 +36,7 @@ class _CarousalState extends State<Carousal> {
       itemCount:item.length ,
       itemBuilder: (context,index,realindex){
          
-          return Image.network(item[index]);
+          return Image.asset(item[index]);
       },
   options: CarouselOptions(
   height:250,

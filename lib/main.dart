@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Plant App',
       theme: ThemeData(
-        scaffoldBackgroundColor: kBackgroundColor,
+        scaffoldBackgroundColor: Colors.white,
         primaryColor: kPrimaryColor,
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,

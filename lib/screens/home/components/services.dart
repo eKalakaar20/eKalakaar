@@ -15,20 +15,20 @@ class RecomendsPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "https://ekalakaar.com/assets/images/patron1.jpg",
+            image: "assets/images/patron1.jpg",
             title: "Patron",
 
           ),
           RecomendPlantCard(
-            image: "https://ekalakaar.com/assets/images/artist.jpg",
+            image: "assets/images/artist.jpg",
             title: "Artist",
           ),
           RecomendPlantCard(
-            image: "https://ekalakaar.com/assets/images/partners.jpg",
+            image: "assets/images/partners.jpg",
             title: "partners",
           ),
           RecomendPlantCard(
-            image: "https://ekalakaar.com/assets/images/fans.jpg",
+            image: "assets/images/fans.jpg",
             title: "Art Lovers",
           ),
         ],
@@ -58,7 +58,7 @@ class RecomendPlantCard extends StatelessWidget {
       width: size.width * 0.4,
       child: Column(
         children: <Widget>[
-          Image.network(image),
+          Image.asset(image),
           GestureDetector(
             onTap: null,
             child: Container(

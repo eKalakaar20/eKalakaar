@@ -80,7 +80,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           icon: const Icon(Icons.arrow_drop_down),
                           iconSize: 24,
                           elevation: 16,
-                          style: const TextStyle(color: kTextColor),
+                          style: const TextStyle(color: Colors.black),
                           onChanged: (String? newValue) {
                             setState(() {
                               dropdownValue = newValue!;

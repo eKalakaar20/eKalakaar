@@ -4,8 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 // Colors that we use in our app
-const kPrimaryColor = Color.fromARGB(255, 186, 12, 9);
+const kPrimaryColor = Color.fromARGB(255, 126, 2, 2);
 const kTextColor = Color.fromARGB(255, 255, 255, 255);
+const kTextColor2 =Color.fromARGB(255, 0, 0, 0);
 const kBackgroundColor = Color.fromARGB(255, 255, 253, 253);
 
 const double kDefaultPadding = 20.0;

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:novo/screens/artist/dashboard_screen.dart';
+import 'package:novo/screens/findopprtunity/find_opportunity.dart';
 import 'package:novo/screens/home/home_screen.dart';
 import 'package:novo/utils/constants.dart';
 
@@ -112,8 +113,12 @@ class _MenuScreenState extends State<MenuScreen> {
                 iconColor: kBackgroundColor,
                 contentPadding: EdgeInsets.only(left: 25)),
             ListTile(
+              onTap: () {
+                 Navigator.push(context,
+                MaterialPageRoute(builder: (context) => FindOpportunityScreen()));
+              },
                 leading: Icon(Icons.extension),
-                title: Text("Patron"),
+                title: Text("Find Opprtunity"),
                 iconColor: kBackgroundColor,
                 contentPadding: EdgeInsets.only(left: 25)),
             ListTile(
